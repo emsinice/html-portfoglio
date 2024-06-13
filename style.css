@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jacquard+12+Charted&display=swap');
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+/* Stile per il campo di ricerca */
+.highlight {
+    background-color:antiquewhite;
+    font-weight: bold;
+        }
+.searchable {
+            position: relative; /* Importante per il posizionamento degli indicatori */
+        }
+.highlight-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    display: none; /* Inizialmente nascosto */
+    background-color: red;
+        }
+
+.dropdown-menu .dropdown-item {
+    color: blue;
+     /* Cambia il colore del testo qui */
+}
+
+
+
+
+.upsection{
+    background-color:#53D7F5;
+    display: grid;
+    width: 100%; 
+    height: 500px;
+    top: 0;
+    right: 0;
+    position:absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden; /* Nasconde la nuvola quando va oltre il bordo destro */  
+
+}
+/*  */
+
+
+
+.cloud{ 
+    position: absolute;
+    width: 15%;
+    height: 55%;
+    transform: translate(-50%, -50%);
+/* animation: moveCloud 23s linear infinite;  *//* Aggiunge un'animazione per far muovere la nuvola */
+    padding: 0%;
+    margin: 0%;
+    top: 0%;
+    bottom: 30%;
+    z-index: 1; /* Assicura che la nuvola sia dietro il testo */
+    animation: 9s linear  infinite running moveCloud;
+}
+
+
+@keyframes moveCloud {
+    0% { left: -15%; } /* Posizione iniziale */
+    100% { left: 100%; } /* Posizione finale (oltre il bordo destro) */
+}
+
+
+
+.benvenuto{
+    font-family: "Dancing Script", cursive;
+    font-size: 170px;
+    grid-area: 2 / 2 / 3 / 4 ;
+    z-index: 2; /* Assicura che il testo sia sopra la nuvola */
+}
+.benvenuto:hover{
+    color: #53A4F5;
+}
+@media (max-width: 1282px){
+    .benvenuto{
+        font-family: "Dancing Script", cursive;
+        font-size: 130px;
+        grid-area: 2 / 2 / 3 / 4 ;
+        z-index: 2; /* Assicura che il testo sia sopra la nuvola */
+    }
+    
+}
+@media (max-width: 980px){
+    .benvenuto{
+        font-family: "Dancing Script", cursive;
+        font-size: 100px;
+        grid-area: 2 / 2 / 3 / 4 ;
+        z-index: 2; /* Assicura che il testo sia sopra la nuvola */
+    }
+}
+@media (max-width: 754px){
+    .benvenuto{
+        font-family: "Dancing Script", cursive;
+        font-size: 80px;
+        grid-area: 3 / 2 / 3 / 4 ;
+        z-index: 2; /* Assicura che il testo sia sopra la nuvola */
+    }
+}
+@media (max-width: 603px){
+    .benvenuto{
+        font-family: "Dancing Script", cursive;
+        font-size: 60px;
+        grid-area: 3 / 2 / 3 / 4 ;
+        z-index: 2; /* Assicura che il testo sia sopra la nuvola */
+    }
+}
+
+@media (max-width: 453px){
+    .benvenuto{
+        font-family: "Dancing Script", cursive;
+        font-size: 50px;
+        z-index: 2; /* Assicura che il testo sia sopra la nuvola */
+    }
+    
+}
+
+.testo{
+    font-family: "Dancing Script", cursive;
+}
+
+/* codice per bar */
+.colorebar{
+    background-color: #a7e6ff;
+}
+.coloretesto{
+    font-family: "Dancing Script", cursive;
+    font-size: 200px;
+}
+.coloretesto:hover{
+    font-family: "Dancing Script", cursive;
+    font-size: 200px;
+    color: white !important; /* appena passo con il mouse il testo diventa bianco */
+}
+.fw-bold{
+    font-family: "Dancing Script", cursive;    
+    font-size: 30px;
+}
+
+.fw-bold:hover{ /* cambio il colore passando con il mouse su timeline */
+    font-family: "Dancing Script", cursive;
+    color: #53A4F5 ;
+
+}
+.sfondo{
+    background-color:#53A4F5;
+}
+
+/* codice per apparire le immagini */
+
+
+.daspostare{
+    position: absolute;
+    opacity: 0;
+    border-radius: 4%;
+    transition: margin-right 2s, color 1s;
+    object-fit: cover;
+}
+
+ /*  pointer-events: auto; Abilita gli eventi del mouse */
+
+
+.italia:hover .daspostare 
+{   opacity: 1;
+    pointer-events: auto;
+    position:absolute;
+    left: 310px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    left:105%;
+
+}  
+
+@media (max-width: 1400px){
+    .daspostare
+    {
+        position: relative;
+        top: 0px;
+        left:0px !important;
+        opacity: 1;
+        margin: 0%;  
+        padding: 0%;
+    }
+        /* fatto che sotto i 1400px il sito mi fa vedere direttamente le foto , ci sono troppi complicazioni , per adesso non vale la pena di combattere */ 
+
+    .italia:hover .daspostare 
+    {   
+        position: relative;
+    } 
+    
+}
+
+
+
